@@ -1,0 +1,61 @@
+<!-- Licensed under a BSD license. See license.html for license -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+<title>Binary Neutron Star in Galaxy</title>
+
+</head>
+
+<body onload="webGLStart();">
+	<div style="background-color:black; position:absolute; top:0; bottom:0; left:0; right:0;" id='loader'></div>
+
+	<div id="hider" style="visibility:hidden">
+	  	<div id="splash" onclick="hideSplash()">
+		  	<div id="splashdiv1">Final Flight of a Neutron Star Pair:</div>
+		  	<div id="splashdiv2">GW170817 from Birth to Merger in Galaxy NGC 4993</div>
+		  	<div id="splashdiv3">LIGO-Virgo / Aaron Geller / Northwestern</div>
+		  	<div id="splashdiv4">Click to Begin</div>
+	  	</div>
+
+	  	<div id="ContentContainer"> 
+
+	  		<div id="errorDiv"></div>
+
+
+	  		<div class="UIcontainer"> 
+	<!-- top banner, to hide UI -->
+				<div class="UItopbar" onclick="hideUI();"></div>
+				<div id="UIhider">
+		    		<div id="UI"></div>
+		    	</div>
+			</div>
+
+	    	<canvas oncontextmenu="return false;" id="WebGL-canvas" style="margin-left:auto; margin-right:0; display:block; padding:0px; background-color:black; position:absolute; top:0; left:0" ></canvas> 
+
+	   </div>
+	</div>
+
+
+	<!-- loading spinner -->
+	<script src="resources/spin.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+	<script src="resources/glMatrix-0.9.5.min.js"></script>
+	<script src="resources/d3.v4.10.2.min.js"></script>
+
+	<!-- shaders -->
+	<script src="shaders/vertex.glsl.js"></script>
+	<script src="shaders/fragment.glsl.js"></script>
+
+	<!-- the main attraction -->
+	<script src="js/index.js"></script>
+
+
+
+</body>
+</html>
+
